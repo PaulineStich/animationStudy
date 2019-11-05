@@ -1,0 +1,15 @@
+.home {
+    position: relative;
+    height: calc(100vh - 56px);
+
+    .head {
+        background-color: rgb(44, 44, 44);
+        height: 53vh;
+    }
+
+    .description {
+        background-color: #2E2E2E;
+        height: 47vh;
+    }
+}
+
