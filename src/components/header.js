@@ -6,22 +6,14 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#353434`,
-      height: 46
+      height: 46,
+      padding: `0 20px`
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        padding: `0.8rem 1.0875rem`,
-      }}
-    >
-      <h3 style={{ margin: 0, fontSize: '12px' }}>
+    <div>
+      <h3>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
         >
           {siteTitle}
         </Link>
