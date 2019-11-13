@@ -52,6 +52,14 @@ module.exports = {
         name: "images",
         path: "src/images"
       }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /static/ 
+        }
+      }
     }
   ],
 }

@@ -1,0 +1,40 @@
+header {
+    --border: 2px solid rgba(204, 204, 204, 0.1);
+    --height: 46px;
+    background: #353434;
+    height: var(--height);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;        
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 0;
+
+    .iconButton {
+        position: relative;
+        height: var(--height);
+        width: var(--height);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-of-type(1) {
+            border-left: var(--border);
+            border-right: var(--border);
+        }
+        &:nth-of-type(2), &:nth-of-type(3) {
+            border-right: var(--border);
+        }
+        &:nth-of-type(4){
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    h3 {
+        padding-left: 1rem;
+    }
+}
