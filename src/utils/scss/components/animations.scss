@@ -34,3 +34,12 @@ html.is-animating .transition-fade {
     transform-origin: bottom;
   }
 }
+
+@keyframes slidein {
+  from {
+    left: 0;
+  }
+  to {
+    left: -5px;
+  }
+}
