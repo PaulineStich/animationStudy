@@ -5,10 +5,14 @@ header {
     height: var(--height);
     padding: 0 20px;
     display: flex;
-    flex-direction: row;        
-    border-top: var(--border);
+    flex-direction: column;       
     border-bottom: var(--border);
     padding: 0;
+
+    nav {
+        display: flex;
+        width: 100%;
+    }
 
     .iconButton {
         position: relative;
@@ -32,9 +36,39 @@ header {
         &:hover {
             cursor: pointer;
         }
+        &[data-click="true"] {
+            background-color: red;
+        }
     }
 
     h3 {
         padding-left: 1rem;
+    }
+
+    .sideNav {
+        z-index: 1;
+        position: relative;
+        width: 368px;
+    
+        ul {
+            padding: 0;
+            li {
+                height: 46px;
+                border: var(--border);
+                border-top: none;
+                background-color: #353434;
+                &:hover {
+                    background-color: #3f3e3e;
+                }
+                a {
+                    justify-content: flex-start;
+                    display: flex;
+                    align-items: center;
+                    height: 45px;
+                    border: none;
+                    padding: 0 12px;
+                }
+            }
+        }
     }
 }

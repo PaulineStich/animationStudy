@@ -1,34 +1,27 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import ArrowLeft from "../../static/svg/mdi_keyboard_arrow_left.svg"
-import ArrowRight from "../../static/svg/mdi_keyboard_arrow_right.svg"
-import Menu from "../../static/svg/mdi_view_headline.svg"
-import Dots from "../../static/svg/dots.svg"
+import { IconButton } from "./IconButton"
+import { SideNav } from "./nav"
 
-const IconButton = ({ children }) => {
-  return <div className="iconButton">{children}</div>
+const Header = ({ siteTitle }) => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <header>
+      <nav>
+        <IconButton menu click={() => setOpen(!open)} />
+        <IconButton arrowLeft />
+        <IconButton arrowRight />
+        <h3>
+          <Link to="/">{siteTitle}</Link>
+        </h3>
+        <IconButton dots />
+      </nav>
+      {open && <SideNav />}
+    </header>
+  )
 }
-
-const Header = ({ siteTitle }) => (
-  <header>
-    <IconButton>
-      <Menu />
-    </IconButton>
-    <IconButton>
-      <ArrowLeft />
-    </IconButton>
-    <IconButton>
-      <ArrowRight />
-    </IconButton>
-    <h3>
-      <Link to="/">{siteTitle}</Link>
-    </h3>
-    <IconButton>
-      <Dots />
-    </IconButton>
-  </header>
-)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
