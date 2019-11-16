@@ -1,19 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
+import usePosts from "../hooks/use-posts"
 
 export const SideNav = props => {
+  const posts = usePosts()
   return (
     <div className="sideNav">
       <ul>
-        <li>
-          <Link to="/">link 1</Link>
-        </li>
-        <li>
-          <Link to="/">link 2</Link>
-        </li>
-        <li>
-          <Link to="/">link 3</Link>
-        </li>
+        {posts.map(post => (
+          <li key={post.slug}>
+            <Link to={post.slug}>{post.title}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   )

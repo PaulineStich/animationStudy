@@ -7,8 +7,9 @@ import Dots from "../../static/svg/dots.svg"
 
 export const IconButton = props => {
   const { menu, arrowLeft, arrowRight, dots, click } = props
+
   return (
-    <div className="iconButton" onClick={click} data-click={click}>
+    <div className="iconButton" onClick={click} >
       {menu && <Menu />}
       {arrowLeft && <ArrowLeft />}
       {arrowRight && <ArrowRight />}
