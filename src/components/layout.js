@@ -27,9 +27,6 @@ const Layout = ({ grid, children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: grid ? 1020 : 'none',
-          padding: grid ? `0px 1.0875rem` : 0,
           paddingTop: 0,
         }}
       >
@@ -41,8 +38,7 @@ const Layout = ({ grid, children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  grid: PropTypes.bool.isRequired
+  children: PropTypes.node.isRequired
 }
 
 

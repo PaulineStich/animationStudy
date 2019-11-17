@@ -19,7 +19,7 @@ const ReadTheFirstArticle = () => {
 const IndexPage = () => {
   return (
     <>
-      <Layout grid={false}>
+      <Layout>
         <SEO title="Home" />
         <div className="home">
           <section className="head">
