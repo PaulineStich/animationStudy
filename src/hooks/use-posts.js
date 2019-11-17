@@ -8,8 +8,15 @@ const usePosts = () => {
           frontmatter {
             title
             slug
+            subtitle
+            image {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
           }
-          excerpt
         }
       }
     }
@@ -17,8 +24,9 @@ const usePosts = () => {
 
   return data.allMdx.nodes.map(post => ({
     title: post.frontmatter.title,
-    slug: post.frontmatter.slug,
-    excerpt: post.excerpt
+    subtitle: post.frontmatter.subtitle,
+    image: post.frontmatter.image,
+    slug: post.frontmatter.slug
   }));
 };
 

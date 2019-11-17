@@ -1,3 +1,41 @@
 .post {
-    
+  height: calc(100vh - 46px);
+  width: 100vw;
+
+  section {
+    height: 100%;
+    position: absolute;
+    &::before {
+      opacity: 0.1;
+    }
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .post-head {
+    padding: 50px 0;
+    .post-subtitle {
+      max-width: 50%;
+    }
+  }
+
+  .post-block {
+    max-width: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    p {
+      padding: 10px 0;
+      font-weight: 300;
+      color: white;
+    }
+  }
 }
