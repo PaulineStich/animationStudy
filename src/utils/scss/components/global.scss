@@ -71,9 +71,17 @@ body {
     font-size: 1.33rem;
     color: white;
     line-height: 1.9rem;
+    font-weight: 100;
   }
 
   h5 {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5rem;
+    font-family: "roboto", sans-serif;
+  }
+
+  h6 {
     font-size: 0.65rem;
     color: white;
     text-transform: uppercase;
@@ -109,7 +117,7 @@ body {
 }
 
 .grid {
-  max-width: 1020px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 

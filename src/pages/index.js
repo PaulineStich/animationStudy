@@ -9,7 +9,7 @@ import "../utils/scss/index.scss";
 const ReadTheFirstArticle = () => {
   return (
     <Link to="/" className="first-article">
-      <h5>Get started</h5>
+      <h6>Get started</h6>
       <p>Read the first article</p>
       <Arrow/>
     </Link>
