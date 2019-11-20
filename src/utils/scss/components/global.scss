@@ -121,6 +121,11 @@ body {
   margin: 0 auto;
 }
 
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
 h1 {
   padding: 30px 0;
 }
