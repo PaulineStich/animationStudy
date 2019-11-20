@@ -1,5 +1,6 @@
 header {
     --border: 2px solid rgba(204, 204, 204, 0.1);
+    --borderLight: 2px solid rgba(245, 245, 245, 1);
     --height: 46px;
     background: #353434;
     height: var(--height);
@@ -36,8 +37,11 @@ header {
         &:hover {
             cursor: pointer;
         }
-        &[data-click="true"] {
-            background-color: red;
+        &[data-is-open="true"] {
+            background-color: #6f6969;
+            // svg {
+            //     // fill:  #353434;
+            // }
         }
     }
 
@@ -60,6 +64,7 @@ header {
                 background-color: #353434;
                 &:hover {
                     background-color: #3f3e3e;
+                    // border: var(--borderLight);
                 }
                 a {
                     justify-content: flex-start;

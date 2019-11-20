@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <nav>
-        <IconButton menu click={() => setOpen(!open)} />
+        <IconButton menu click={() => setOpen(!open)} open={open}/>
         <IconButton arrowLeft />
         <IconButton arrowRight />
         <h3>
