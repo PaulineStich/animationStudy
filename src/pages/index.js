@@ -1,20 +1,9 @@
-import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Arrow from "../../static/svg/mdi_arrow_right_alt.svg"
+import {ReadTheFirstArticle} from "../components/buttons"
 
 import "../utils/scss/index.scss";
-
-const ReadTheFirstArticle = () => {
-  return (
-    <Link to="/" className="first-article">
-      <h6>Get started</h6>
-      <p>Read the first article</p>
-      <Arrow/>
-    </Link>
-  )
-}
 
 const IndexPage = () => {
   return (

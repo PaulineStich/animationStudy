@@ -1,11 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BackgroundImage from "gatsby-background-image"
-import Arrow from "../../static/svg/mdi_arrow_right_alt.svg"
-
 import Layout from "../components/layout"
+import {ReadTheNextArticle} from "../components/buttons"
 
 export const query = graphql`
   query($slug: String!) {
@@ -26,24 +24,6 @@ export const query = graphql`
   }
 `
 
-const ReadTheNextArticle = () => {
-  return (
-    <Link to="/" className="next-article">
-      <div>
-        <h6>squash & stretch</h6>
-        <p>
-          When applied, it gives your animated characters and objects the
-          illusion ....
-        </p>
-      </div>
-      <div>
-        <p>read next</p>
-        <Arrow />
-      </div>
-    </Link>
-  )
-}
-
 const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
     <div className="post">
@@ -63,7 +43,11 @@ const PostTemplate = ({ data: { mdx: post } }) => (
             <MDXRenderer>{post.body}</MDXRenderer>
           </div>
         </div>
-        <ReadTheNextArticle />
+        <ReadTheNextArticle 
+          title='squash & stretch'
+          description='When applied, it gives your animated characters and objects the illusion ...'
+          linkTo={'/'}
+        />
       </BackgroundImage>
     </div>
   </Layout>
