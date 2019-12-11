@@ -6,7 +6,6 @@ import { SideNav } from "./nav"
 
 const Header = ({ siteTitle, next, previous }) => {
   const [open, setOpen] = useState(false)
-  console.log(next, previous)
 
   return (
     <header>

@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import ArrowLeft from "../../static/svg/mdi_keyboard_arrow_left.svg"
-import ArrowRight from "../../static/svg/mdi_keyboard_arrow_right.svg"
-import Menu from "../../static/svg/mdi_view_headline.svg"
-import Dots from "../../static/svg/dots.svg"
+import ArrowLeft from "../../../static/svg/mdi_keyboard_arrow_left.svg"
+import ArrowRight from "../../../static/svg/mdi_keyboard_arrow_right.svg"
+import Menu from "../../../static/svg/mdi_view_headline.svg"
+import Dots from "../../../static/svg/dots.svg"
 
 export const IconButton = props => {
   const { open, click, menu, arrowLeft, arrowRight, dots } = props

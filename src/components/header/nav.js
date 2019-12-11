@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import usePosts from "../hooks/use-posts"
+import usePosts from "../../hooks/use-posts"
 
 export const SideNav = props => {
   const posts = usePosts()
