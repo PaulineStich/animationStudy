@@ -25,9 +25,12 @@ export const query = graphql`
 `
 
 const PostTemplate = ({ data: { mdx: post }, pageContext: {next, previous}}) => {
+  const nextSlug = (next !== null) ? next.frontmatter.slug : null
+  const previousSlug = (previous !== null) ? previous.frontmatter.slug : null
+  
   return (
-    <Layout>
-      <div className="post">
+    <Layout next={nextSlug} previous={previousSlug}>
+      <div className="post" >
         <BackgroundImage
           Tag="section"
           fluid={post.frontmatter.image.sharp.fluid}
@@ -44,11 +47,17 @@ const PostTemplate = ({ data: { mdx: post }, pageContext: {next, previous}}) => 
               <MDXRenderer>{post.body}</MDXRenderer>
             </div>
           </div>
-          <ReadTheNextArticle
-            title="squash & stretch"
-            description="When applied, it gives your animated characters and objects the illusion ..."
-            linkTo={next.frontmatter.slug}
-          />
+          {next === false ? null : (
+            <>
+              {next && (
+                <ReadTheNextArticle
+                  title="squash & stretch"
+                  description="When applied, it gives your animated characters and objects the illusion ..."
+                  linkTo={next.frontmatter.slug}
+                />
+              )}
+            </>
+          )}
         </BackgroundImage>
       </div>
     </Layout>

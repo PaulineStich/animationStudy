@@ -4,18 +4,35 @@ import PropTypes from "prop-types"
 import { IconButton } from "./IconButton"
 import { SideNav } from "./nav"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, next, previous }) => {
   const [open, setOpen] = useState(false)
+  console.log(next, previous)
 
   return (
     <header>
       <nav>
-        <IconButton menu click={() => setOpen(!open)} open={open}/>
-        <IconButton arrowLeft />
-        <IconButton arrowRight />
-        <h3>
-          <Link to="/">{siteTitle}</Link>
-        </h3>
+        <div>
+          <IconButton menu click={() => setOpen(!open)} open={open} />
+          {previous === null | undefined ? null : (
+            <>
+              <Link to={previous} className="headerArrow">
+                <IconButton arrowLeft />
+              </Link>
+            </>
+          )}
+          {next === null | undefined ? null : (
+            <>
+              {next && (
+                <Link to={next} className="headerArrow">
+                  <IconButton arrowRight />
+                </Link>
+              )}
+            </>
+          )}
+          <h3>
+            <Link to="/">{siteTitle}</Link>
+          </h3>
+        </div>
         <IconButton dots />
       </nav>
       {open && <SideNav />}
@@ -25,6 +42,8 @@ const Header = ({ siteTitle }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  next: PropTypes.string,
+  previous: PropTypes.string
 }
 
 Header.defaultProps = {

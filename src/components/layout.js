@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 
-const Layout = ({ grid, children }) => {
+const Layout = ({ children, next, previous }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +24,7 @@ const Layout = ({ grid, children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} next={next} previous={previous}/>
       <div
         style={{
           paddingTop: 0,
@@ -38,7 +38,9 @@ const Layout = ({ grid, children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  next: PropTypes.string,
+  previous: PropTypes.string
 }
 
 
