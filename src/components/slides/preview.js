@@ -1,28 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import usePosts from "../../hooks/use-posts"
 
-const PreviewTemplate = ({ title, subtitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query PreviewImage {
-      mdx {
-        frontmatter {
-          image {
-            sharp: childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+const PreviewTemplate = ({ title, subtitle, children, i }) => {
+  const posts = usePosts()
   return (
     <div className="post">
       <BackgroundImage
         Tag="section"
-        fluid={data.mdx.frontmatter.image.sharp.fluid}
+        fluid={posts[i].image.sharp.fluid}
         backgroundColor={`#353434`}
         fadeIn="soft"
       >
