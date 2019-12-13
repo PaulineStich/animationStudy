@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import Layout from "../components/layout"
 import { ReadTheNextArticle } from "../components/buttons"
 import PreviewTemplate from "../components/slides/preview"
+import SlideTemplate from "../components/slides/slide"
 
 export const query = graphql`
   query($slug: String!) {
@@ -27,6 +28,7 @@ export const query = graphql`
 
 const templates = {
   PreviewTemplate,
+  SlideTemplate,
 }
 
 const PostTemplate = ({
