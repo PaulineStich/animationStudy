@@ -1,11 +1,12 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter}) => {
   const result = await graphql(`
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           body
+          id
           frontmatter {
             slug
           }
@@ -21,8 +22,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.allMdx.nodes
 
   posts.forEach((post, index) => {
+    
     const previous = index === posts.length - 1 ? null : posts[index + 1]
     const next = index === 0 ? null : posts[index - 1]
+    console.log(next)
 
     actions.createPage({
       path: post.frontmatter.slug,
