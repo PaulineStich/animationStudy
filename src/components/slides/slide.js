@@ -1,11 +1,11 @@
 import React from "react"
 
-const SlideTemplate = ({ title, subtitle, children, i }) => {
+const SlideTemplate = ({ title, children, src }) => {
   return (
     <div className="slide">
-      <div class="slide-container">
+      <div className="slide-container">
         <h6>{title}</h6>
-        <img alt="image"></img>
+        <img alt={title} src={src}></img>
         <p>{children}</p>
       </div>
     </div>
