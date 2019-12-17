@@ -8,6 +8,7 @@ exports.createPages = async ({ actions, graphql, reporter}) => {
           body
           id
           frontmatter {
+            title
             slug
           }
         }

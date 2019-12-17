@@ -1,0 +1,9 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+  a {
+    border-bottom: none;
+  }
+}

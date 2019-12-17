@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
@@ -29,32 +29,22 @@ export const query = graphql`
 const templates = {
   PreviewTemplate,
   SlideTemplate,
-  ReadTheNextArticle
+  ReadTheNextArticle,
 }
 
 const PostTemplate = ({
   data: { mdx: post },
   pageContext: { next, previous },
 }) => {
+  const [isSlide] = useState(post.frontmatter.subtitle === null ? true : false)
   const nextSlug = next !== null ? next.frontmatter.slug : null
   const previousSlug = previous !== null ? previous.frontmatter.slug : null
 
   return (
-    <Layout next={nextSlug} previous={previousSlug}>
+    <Layout next={nextSlug} previous={previousSlug} n={next} p={previous} slide={isSlide}>
       <MDXProvider components={templates}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXProvider>
-      {/* {next === false ? null : (
-        <>
-          {next && (
-            <ReadTheNextArticle
-              title="squash & stretch"
-              description="When applied, it gives your animated characters and objects the illusion ..."
-              linkTo={next.frontmatter.slug}
-            />
-          )}
-        </>
-      )} */}
     </Layout>
   )
 }

@@ -1,14 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import Arrow from "../../static/svg/mdi_arrow_right_alt.svg"
+import ArrowRight from "../../static/svg/mdi_arrow_right_alt.svg"
+import ArrowLeft from "../../static/svg/mdi_arrow_left_alt.svg"
+
 
 export const ReadTheFirstArticle = () => {
   return (
     <Link to="/introduction" className="first-article">
       <h6>Get started</h6>
       <p>Read the first article</p>
-      <Arrow/>
+      <ArrowRight/>
     </Link>
   )
 }
@@ -25,7 +27,7 @@ export const ReadTheNextArticle = props => {
       </div>
       <div>
         <p>read next</p>
-        <Arrow />
+        <ArrowRight />
       </div>
     </Link>
   )
@@ -35,4 +37,24 @@ ReadTheNextArticle.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   linkTo: PropTypes.string.isRequired
+}
+
+export const Button = props => {
+  const {title, linkTo, next, previous} = props;
+  return (
+    <Link to={linkTo}>
+      <div className="button">
+        {previous && <ArrowLeft /> }
+        <h6>{title}</h6>
+        {next && <ArrowRight /> }
+      </div>
+    </Link>
+  )
+}
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+  linkTo: PropTypes.string.isRequired,
+  next: PropTypes.bool,
+  previous: PropTypes.bool
 }
