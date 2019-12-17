@@ -6,12 +6,12 @@ const PreviewTemplate = ({ title, subtitle, children, i }) => {
   const posts = usePosts()
   return (
     <div className="post">
-      <BackgroundImage
+      {/* <BackgroundImage
         Tag="section"
         fluid={posts[i].image.sharp.fluid}
         backgroundColor={`#353434`}
         fadeIn="soft"
-      >
+      > */}
         <div className="grid">
           <div className="post-head">
             <h2 className="post-title">{title}</h2>
@@ -22,7 +22,7 @@ const PreviewTemplate = ({ title, subtitle, children, i }) => {
             <h5>{children}</h5>
           </div>
         </div>
-      </BackgroundImage>
+      {/* </BackgroundImage> */}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 .slide {
     text-align: center;
-    height: calc(100vh - 46px);
+    min-height: calc(100vh - 46px - 105px);
     width: 100vw;
     display: flex;
   
@@ -16,6 +16,10 @@
         border-bottom: 1px solid rgba(196, 196, 196, 0.3);
       }
 
+      img {
+        min-height: 278px;
+      }
+
       img, h6, p {
         margin: 20px 0; 
       }
@@ -23,6 +27,9 @@
       p {
         width: 50%;
         max-width: 500px;
+        p {
+          width: 100%;
+        }
       }
     }
   }

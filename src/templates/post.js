@@ -29,6 +29,7 @@ export const query = graphql`
 const templates = {
   PreviewTemplate,
   SlideTemplate,
+  ReadTheNextArticle
 }
 
 const PostTemplate = ({
@@ -43,7 +44,7 @@ const PostTemplate = ({
       <MDXProvider components={templates}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXProvider>
-      {next === false ? null : (
+      {/* {next === false ? null : (
         <>
           {next && (
             <ReadTheNextArticle
@@ -53,7 +54,7 @@ const PostTemplate = ({
             />
           )}
         </>
-      )}
+      )} */}
     </Layout>
   )
 }
