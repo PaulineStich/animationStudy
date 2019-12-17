@@ -25,12 +25,12 @@
       }
   
       p {
-        width: 50%;
-        max-width: 500px;
-        p {
-          width: 100%;
-        }
+        max-width: 600px;
+        // & > img {
+        //   width: 100%;
+        // }
       }
+
     }
   }
   
