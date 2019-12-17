@@ -7,11 +7,13 @@ export const SideNav = props => {
   return (
     <div className="sideNav">
       <ul>
-        {posts.map(post => (
-          <li key={post.slug}>
-            <Link to={post.slug}>{post.title}</Link>
-          </li>
-        ))}
+        {posts.map(post => {
+          return post.subtitle !== null ? (
+            <li key={post.slug}>
+              <Link to={post.slug}>{post.title}</Link>
+            </li>
+          ) : null
+        })}
       </ul>
     </div>
   )
