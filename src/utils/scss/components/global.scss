@@ -5,7 +5,7 @@
 
 body {
   color: #dad3d3;
-  background-color: #353434;
+  background-color: var(--color-bg);
 }
 
 html,
@@ -39,7 +39,7 @@ body {
   }
 
   a {
-    color: white;
+    color: var(--color-white);
     font-size: 14px;
     font-family: "roboto", sans-serif;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
@@ -47,43 +47,43 @@ body {
   }
 
   button a {
-    color: white;
+    color: var(--color-white);
   }
 
   h1 {
     font-size: 3.157rem;
-    color: white;
+    color: var(--color-white);
   }
 
   h2 {
     font-size: 2.369rem;
-    color: white;
+    color: var(--color-white);
     font-weight: 200;
   }
 
   h3 {
     font-size: 1.77rem;
-    color: white;
+    color: var(--color-white);
     line-height: 2.38rem;
   }
 
   h4 {
     font-size: 1.33rem;
-    color: white;
+    color: var(--color-white);
     line-height: 1.9rem;
     font-weight: 100;
   }
 
   h5 {
     font-size: 1rem;
-    color: white;
+    color: var(--color-white);
     line-height: 1.5rem;
     font-family: "roboto", sans-serif;
   }
 
   h6 {
     font-size: 0.65rem;
-    color: white;
+    color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: "roboto", sans-serif;
@@ -136,7 +136,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 ::-webkit-scrollbar-thumb {

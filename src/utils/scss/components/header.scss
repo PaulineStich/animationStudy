@@ -2,7 +2,7 @@ header {
   --border: 2px solid rgba(204, 204, 204, 0.1);
   --borderLight: 2px solid rgba(245, 245, 245, 1);
   --height: 46px;
-  background: #353434;
+  background: var(--color-bg); 
   height: var(--height);
   padding: 0 20px;
   display: flex;
@@ -65,7 +65,7 @@ header {
         height: 46px;
         border: var(--border);
         border-top: none;
-        background-color: #353434;
+        background-color: var(--color-bg);;
         &:hover {
           background-color: #3f3e3e;
           // border: var(--borderLight);
