@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { CSSTransition } from 'react-transition-group';
 import { IconButton } from "./IconButton"
 import { SideNav } from "./nav"
 
@@ -34,7 +35,14 @@ const Header = ({ siteTitle, next, previous }) => {
         </div>
         <IconButton dots />
       </nav>
-      {open && <SideNav />}
+       <CSSTransition 
+        in={open}
+        timeout={250}
+        classNames="opacityFade"
+        unmountOnExit
+       >
+        <SideNav />
+       </CSSTransition>
     </header>
   )
 }

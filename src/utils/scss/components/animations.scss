@@ -43,3 +43,22 @@ html.is-animating .transition-fade {
     left: -5px;
   }
 }
+
+/* CSSTransition */
+.opacityFade-enter {
+  opacity: 0;
+}
+
+.opacityFade-enter-active {
+  opacity: 1;
+  transition: all 100ms ease-in;
+}
+
+.opacityFade-exit {
+  opacity: 1;
+}
+
+.opacityFade-exit-active {
+  opacity: 0;
+  transition: all 100ms ease-in;
+}
