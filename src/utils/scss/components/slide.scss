@@ -19,9 +19,10 @@
       img {
         min-height: 278px;
       }
-
+      
       img, h6, p {
         margin: 20px 0; 
+        filter: grayscale(30%);
       }
   
       p {

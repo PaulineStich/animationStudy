@@ -4,16 +4,9 @@
   height: calc(100vh - 46px);
 
   .head {
-    background-color: rgb(44, 44, 44);
-    height: 100%;
-    background-image: url("/svg/pattern.svg");
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    z-index: 0;
-    svg {
-      height: 100%;
-    }
   }
 
   .body {

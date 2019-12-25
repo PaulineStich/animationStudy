@@ -8,6 +8,10 @@ body {
   background-color: var(--color-bg);
 }
 
+main {
+  overflow: hidden;
+}
+
 html,
 body {
   margin: 0;

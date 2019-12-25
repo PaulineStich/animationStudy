@@ -1,6 +1,7 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import usePosts from "../../hooks/use-posts"
+// import WebGL from "../webgl/index"
 
 const PreviewTemplate = ({ title, subtitle, children, i }) => {
   const posts = usePosts()
@@ -23,6 +24,7 @@ const PreviewTemplate = ({ title, subtitle, children, i }) => {
           </div>
         </div>
       </BackgroundImage>
+      {/* <WebGL /> */}
     </div>
   )
 }

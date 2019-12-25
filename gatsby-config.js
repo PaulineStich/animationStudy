@@ -53,6 +53,7 @@ module.exports = {
           include: /static/ 
         }
       }
-    }
+    },
+    `gatsby-plugin-glslify`
   ],
 }

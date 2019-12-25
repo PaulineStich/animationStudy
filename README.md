@@ -20,4 +20,6 @@
 
 Gatsby  
 React  
-GraphQl
+GraphQl  
+Three  
+Gsap  
