@@ -19,7 +19,7 @@ const PreviewTemplate = ({ title, subtitle, children, i }) => {
             <div className="line" />
             <h4 className="post-subtitle">{subtitle}</h4>
           </div>
-          <div className="post-block">
+          <div className="post-block" >
             <h5>{children}</h5>
           </div>
         </div>

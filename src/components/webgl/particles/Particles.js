@@ -159,6 +159,6 @@ export default class Particles {
     if (!this.finalObject) return
 
     const scale = this.webgl.fovHeight / this.height
-	this.finalObject.scale.set(scale, scale, 1)
+    this.finalObject.scale.set(scale, scale, 1)
   }
 }
