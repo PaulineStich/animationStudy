@@ -1,26 +1,38 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from "react-transition-group"
 import { IconButton } from "./IconButton"
-import { SideNav } from "./nav"
+import { SideNav, SideAbout } from "./nav"
 
 const Header = ({ siteTitle, next, previous }) => {
-  const [open, setOpen] = useState(false)
+  const [openNav, setOpenNav] = useState(false)
+  const [openAbout, setOpenAbout] = useState(false)
+
+  const array = [
+    {
+      state: openNav,
+      component: <SideNav />,
+    },
+    {
+      state: openAbout,
+      component: <SideAbout />,
+    },
+  ]
 
   return (
     <header>
       <nav>
         <div>
-          <IconButton menu click={() => setOpen(!open)} open={open} />
-          {previous === null | undefined ? null : (
+          <IconButton menu click={() => setOpenNav(!openNav)} open={openNav} />
+          {(previous === null) | undefined ? null : (
             <>
               <Link to={previous} className="headerArrow">
                 <IconButton arrowLeft />
               </Link>
             </>
           )}
-          {next === null | undefined ? null : (
+          {(next === null) | undefined ? null : (
             <>
               {next && (
                 <Link to={next} className="headerArrow">
@@ -33,16 +45,22 @@ const Header = ({ siteTitle, next, previous }) => {
             <Link to="/">{siteTitle}</Link>
           </h3>
         </div>
-        <IconButton dots />
+        <IconButton
+          dots
+          click={() => setOpenAbout(!openAbout)}
+          open={openAbout}
+        />
       </nav>
-       <CSSTransition 
-        in={open}
-        timeout={250}
-        classNames="opacityFade"
-        unmountOnExit
-       >
-        <SideNav />
-       </CSSTransition>
+      {array.map(el => (
+        <CSSTransition
+          in={el.state}
+          timeout={250}
+          classNames="opacityFade"
+          unmountOnExit
+        >
+          {el.component}
+        </CSSTransition>
+      ))}
     </header>
   )
 }
@@ -50,7 +68,7 @@ const Header = ({ siteTitle, next, previous }) => {
 Header.propTypes = {
   siteTitle: PropTypes.string,
   next: PropTypes.string,
-  previous: PropTypes.string
+  previous: PropTypes.string,
 }
 
 Header.defaultProps = {

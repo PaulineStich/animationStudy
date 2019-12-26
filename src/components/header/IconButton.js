@@ -4,6 +4,7 @@ import ArrowLeft from "../../../static/svg/mdi_keyboard_arrow_left.svg"
 import ArrowRight from "../../../static/svg/mdi_keyboard_arrow_right.svg"
 import Menu from "../../../static/svg/mdi_view_headline.svg"
 import Dots from "../../../static/svg/dots.svg"
+import Close from "../../../static/svg/close.svg"
 
 export const IconButton = props => {
   const { open, click, menu, arrowLeft, arrowRight, dots } = props
@@ -19,7 +20,7 @@ export const IconButton = props => {
       {menu && <Menu />}
       {arrowLeft && <ArrowLeft />}
       {arrowRight && <ArrowRight />}
-      {dots && <Dots />}
+      {dots && open ? <Close /> : dots && <Dots /> }
     </div>
   )
 }

@@ -2,7 +2,7 @@ header {
   --border: 2px solid rgba(204, 204, 204, 0.1);
   --borderLight: 2px solid rgba(245, 245, 245, 1);
   --height: 46px;
-  background: var(--color-bg); 
+  background: var(--color-bg);
   height: var(--height);
   padding: 0 20px;
   display: flex;
@@ -44,7 +44,7 @@ header {
     &[data-is-open="true"] {
       background-color: #6f6969;
       // svg {
-      //     // fill:  #353434;
+      //     fill:  #353434;
       // }
     }
   }
@@ -56,13 +56,15 @@ header {
   .sideNav {
     z-index: 1;
     width: 368px;
+    position: fixed;
+    top: 46px;
     ul {
       padding: 0;
       li {
         height: 46px;
         border: var(--border);
         border-top: none;
-        background-color: var(--color-bg);;
+        background-color: var(--color-bg);
         &:hover {
           background-color: #3f3e3e;
           // border: var(--borderLight);
@@ -76,6 +78,24 @@ header {
           padding: 0 12px;
         }
       }
+    }
+  }
+
+  .sideAbout {
+    z-index: 1;
+    width: 368px;
+    position: fixed;
+    top: 44px;
+    align-self: flex-end;
+    background-color: var(--color-bg);
+    border: var(--border);
+    padding: 10px;
+    // h6 {
+    //   margin: 0 12px 5px 12px;
+    //   border-bottom: 1px solid rgba(196, 196, 196, 0.3);
+    // }
+    p {
+      padding: 12px;
     }
   }
 }
