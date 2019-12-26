@@ -1,7 +1,6 @@
 /* inspired from great article on particles with buffergeometries from brunoimbrizi on codrops */
 import * as THREE from "three"
-import { TweenLite, Quad } from "gsap"
-
+import { TweenLite } from "gsap"
 const glslify = require("glslify")
 
 export default class Particles {

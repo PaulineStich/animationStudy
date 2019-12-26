@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useRef } from "react"
+import React, { Component } from "react"
 import Engine from "./Engine"
 
 export default class WebGL extends Component {
