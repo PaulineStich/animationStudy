@@ -4,26 +4,23 @@ import PropTypes from "prop-types"
 import ArrowRight from "../../static/svg/mdi_arrow_right_alt.svg"
 import ArrowLeft from "../../static/svg/mdi_arrow_left_alt.svg"
 
-
 export const ReadTheFirstArticle = () => {
   return (
     <Link to="/introduction" className="first-article">
       <h6>Get started</h6>
       <p>Read the first article</p>
-      <ArrowRight/>
+      <ArrowRight />
     </Link>
   )
 }
 
 export const ReadTheNextArticle = props => {
-  const {title, description, linkTo} = props;
+  const { title, description, linkTo } = props
   return (
     <Link to={linkTo} className="next-article">
       <div>
         <h6>{title}</h6>
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
       </div>
       <div>
         <p>read next</p>
@@ -36,17 +33,17 @@ export const ReadTheNextArticle = props => {
 ReadTheNextArticle.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired
+  linkTo: PropTypes.string.isRequired,
 }
 
 export const Button = props => {
-  const {title, linkTo, next, previous} = props;
+  const { title, linkTo, next, previous } = props
   return (
-    <Link to={linkTo}>
+    <Link to={linkTo} className={next ? "next" : "previous"}>
       <div className="button">
-        {previous && <ArrowLeft /> }
+        {previous && <ArrowLeft />}
         <h6>{title}</h6>
-        {next && <ArrowRight /> }
+        {next && <ArrowRight />}
       </div>
     </Link>
   )
@@ -56,5 +53,5 @@ Button.propTypes = {
   title: PropTypes.string.isRequired,
   linkTo: PropTypes.string.isRequired,
   next: PropTypes.bool,
-  previous: PropTypes.bool
+  previous: PropTypes.bool,
 }

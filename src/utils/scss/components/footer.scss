@@ -1,9 +1,18 @@
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
   a {
     border-bottom: none;
+  }
+  .previous {
+    grid-column: 1 / 2;
+  }
+  .next {
+    grid-column: 4 / 4;
+    div {
+      float: right;
+    }
   }
 }
