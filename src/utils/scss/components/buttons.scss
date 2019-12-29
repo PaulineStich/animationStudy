@@ -1,7 +1,7 @@
 .first-article {
   height: 125px;
   width: 265px;
-  background-color: #6f6969;
+  background-color: var(--color-buttons);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,7 +16,7 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: rgb(124, 114, 114);
+    background-color: var(--color-buttons-hover);
     transition: var(--ease);
     svg {
       transition: var(--ease);
@@ -32,7 +32,7 @@
   bottom: 0;
   height: 105px;
   width: 535px;
-  background-color: #6f6969;
+  background-color: var(--color-buttons);
   padding: 15px 25px;
   transition: var(--ease);
   border-bottom: none;
@@ -54,7 +54,7 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: rgb(124, 114, 114);
+    background-color: var(--color-buttons-hover);
     transition: var(--ease);
     svg {
       transition: var(--ease);
@@ -65,7 +65,7 @@
 }
 
 .button {
-  background-color: #6f6969;
+  background-color: var(--color-buttons);
   width: 220px;
   height: 60px;
   display: flex;
@@ -80,7 +80,7 @@
   }
   &:hover {
     cursor: pointer;
-    background-color: rgb(124, 114, 114);
+    background-color: var(--color-buttons-hover);
     transition: var(--ease);
   }
 }

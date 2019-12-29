@@ -40,9 +40,12 @@ header {
     }
     &:hover {
       cursor: pointer;
+      background-color: var(--color-bg-hover);
+      border-top: var(--border);
+      border-bottom: var(--border);
     }
     &[data-is-open="true"] {
-      background-color: #6f6969;
+      background-color: var(--color-bg-hover);
       // svg {
       //     fill:  #353434;
       // }
@@ -66,7 +69,7 @@ header {
         border-top: none;
         background-color: var(--color-bg);
         &:hover {
-          background-color: #3f3e3e;
+          background-color: var(--color-bg-hover);
           // border: var(--borderLight);
         }
         a {
