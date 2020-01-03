@@ -71,6 +71,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1051;
+  position: relative;
   h6 {
     padding: 0 5px;
     white-space: nowrap;

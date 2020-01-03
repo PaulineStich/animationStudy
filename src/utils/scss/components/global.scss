@@ -115,6 +115,14 @@ body {
     }
   }
 
+  button {
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .line {
     width: 100%;
     height: 1px;

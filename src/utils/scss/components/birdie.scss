@@ -1,0 +1,104 @@
+.hint {
+  position: absolute;
+  left: 20px;
+  bottom: 200px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .bird {
+    z-index: 10412;
+    width: 140px;
+    .blah {
+      position: relative;
+      left: 50px;
+      top: 10px;
+      h5 {
+        color: white;
+        transform: rotate(-25deg);
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-size: 8px;
+        font-family: sans-serif;
+        opacity: 0;
+      }
+    }
+    svg {
+      height: 120px;
+      width: 150px;
+    }
+  }
+
+  .button-default {
+    background: transparent;
+    position: relative;
+    top: 15px;
+    .square-hover {
+      stroke-dasharray: 125;
+    }
+    svg {
+      position: absolute;
+    }
+  }
+}
+
+// modal
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  top: 40px;
+  z-index: 1040;
+  background-color: #2b2d38;
+  opacity: 0.8;
+  border: 15px solid #373a47;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.modal {
+  z-index: 100;
+  position: absolute;
+  bottom: 120px;
+  left: 228px;
+  border-radius: 3px;
+  max-width: 600px;
+  padding: 15px 23px;
+  background-color: #d3cfcf;
+  p {
+    margin: 0;
+    color: #3c3737;
+    font-family: sans-serif;
+    line-height: 22px;
+  }
+  .modal-header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    .modal-close-button {
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 1;
+      color: #000;
+      opacity: 0.3;
+      cursor: pointer;
+      border: none;
+      padding: 5px 10px;
+    }
+  }
+}
