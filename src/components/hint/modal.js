@@ -7,6 +7,7 @@ import {
   useSpring,
   useChain,
 } from "react-spring"
+import Birdie from "./birdie"
 
 const Modal = ({ isShowing, hide, children }) => {
   const widthRef = useRef()
@@ -16,7 +17,7 @@ const Modal = ({ isShowing, hide, children }) => {
     from: { width: "40%", height: "0%" },
     to: {
       width: isShowing ? "100%" : "0%",
-      height: isShowing ? "18.6%" : "0%",
+      height: isShowing ? "20.6%" : "0%",
     },
   })
 
@@ -66,6 +67,9 @@ const Modal = ({ isShowing, hide, children }) => {
                         >
                           <span aria-hidden="true">&times;</span>
                         </button>
+                      </animated.div>
+                      <animated.div className="modal-bird" style={{ ...props }}>
+                        <Birdie />
                       </animated.div>
                       <animated.p style={{ ...props }}>{children}</animated.p>
                     </div>
