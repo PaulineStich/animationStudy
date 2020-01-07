@@ -1,10 +1,10 @@
 import React from "react"
 import { animated, useSpring } from "react-spring"
 
-const Button = ({ isShowing, hide }) => {
+const Button = ({ isHovered, hide }) => {
   const props = useSpring({
-    x: isShowing ? 0 : 125,
-    rotation: isShowing ? "rotate(0deg)" : "rotate(90deg)",
+    x: isHovered ? 0 : 125,
+    rotation: isHovered ? "rotate(0deg)" : "rotate(90deg)",
     from: { x: 125, rotation: "rotate(90deg)" },
   })
 

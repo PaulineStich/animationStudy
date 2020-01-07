@@ -54,7 +54,7 @@ const animationBirdRespire = (tl, ventre) => {
   tl.fromTo(ventre, 0.4, { scale: 0.99, ease: Sine.easeOut }, { scale: 0.997 })
 }
 
-const Birdie = ({ isShowing }) => {
+const Birdie = ({ isShowing , isHovered }) => {
   let oiseau = useRef(null)
   let queue = useRef(null)
   let aile = useRef(null)
@@ -78,9 +78,9 @@ const Birdie = ({ isShowing }) => {
   )
   const [tlBirdRespire] = useState(new TimelineMax({ repeat: -1, yoyo: true }))
   const [tlSupris] = useState(new TimelineMax({ paused: true }))
-  const [tlBlahBlah] = useState(new TimelineMax({ paused: true, repeat: 2 }))
+  const [tlBlahBlah] = useState(new TimelineMax({ paused: true, repeat: 50 }))
 
-  const [clickSupriseAnimation, setClickSupriseAnimation] = useState()
+  const [hoverSupriseAnimation, setHoverSupriseAnimation] = useState()
   const [clickBlahAnimation, setClickBlahAnimation] = useState()
 
   useEffect(() => {
@@ -102,7 +102,7 @@ const Birdie = ({ isShowing }) => {
   ])
 
   useEffect(() => {
-    setClickSupriseAnimation(
+    setHoverSupriseAnimation(
       tlSupris
         .fromTo(
           suprise1,
@@ -147,25 +147,29 @@ const Birdie = ({ isShowing }) => {
   }, [tlBlahBlah])
 
   useEffect(() => {
-    if (
-      clickSupriseAnimation !== undefined &&
-      clickBlahAnimation !== undefined
-    ) {
-      isShowing
-        ? clickSupriseAnimation.play() && clickBlahAnimation.play()
-        : clickSupriseAnimation.reverse(-1) && clickBlahAnimation.reverse(-1)
+    
+    if (clickBlahAnimation !== undefined) {
+      isShowing === undefined ? clickBlahAnimation.play() : clickBlahAnimation.reverse(-1)
     }
-  }, [isShowing, clickSupriseAnimation, clickBlahAnimation])
+
+    if (hoverSupriseAnimation !== undefined) {
+      isHovered
+        ? hoverSupriseAnimation.play()
+        : hoverSupriseAnimation.reverse(-1)
+    }
+
+  }, [isShowing, isHovered, hoverSupriseAnimation, clickBlahAnimation])
+
 
   return (
     <div className="bird">
       <div className="blah">
-        <h5 ref={el => (blah1 = el)}>
+        <h6 ref={el => (blah1 = el)} className="blah-text">
           <em>blah</em>
-        </h5>
-        <h5 ref={el => (blah2 = el)}>
+        </h6>
+        <h6 ref={el => (blah2 = el)} className="blah-text">
           <em>blah</em>
-        </h5>
+        </h6>
       </div>
       <svg width="100%" height="100%" viewBox="0 0 447 498">
         <g transform="matrix(1,0,0,1,-329.312,-718.508)">

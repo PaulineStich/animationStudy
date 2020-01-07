@@ -1,32 +1,14 @@
 .hint {
-  position: absolute;
-  left: 20px;
-  bottom: 200px;
-
+  position: fixed;
+  bottom: 17vh;
+  left: 25px;
   .container {
     display: flex;
     align-items: center;
   }
-
   .bird {
     // z-index: 10412;
     width: 140px;
-    .blah {
-      position: relative;
-      left: 50px;
-      top: 10px;
-      h5 {
-        color: white;
-        transform: rotate(-25deg);
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 400;
-        font-size: 8px;
-        font-family: sans-serif;
-        opacity: 0;
-      }
-    }
     svg {
       height: 120px;
       width: 150px;
@@ -34,9 +16,10 @@
   }
 
   .button-default {
+    position: fixed;
+    bottom: 25vh;
+    left: 165px;
     background: transparent;
-    position: relative;
-    top: 15px;
     .square-hover {
       stroke-dasharray: 125;
     }
@@ -119,6 +102,20 @@
     }
     .blah {
       position: absolute;
+      left: 30px;
+      top: 0px;
+      .blah-text {
+        color: #2d2323;
+        transform: rotate(-25deg);
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-size: 8px;
+        font-family: sans-serif;
+        opacity: 0;
+        line-height: 14px;
+      }
     }
   }
 }

@@ -2,30 +2,31 @@ import { useRef, useState, useEffect } from 'react';
 
 
 const useHover = () => {
-  const [value, setValue] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
-  const ref = useRef(null);
+  const ref = useRef();
 
-  const handleMouseOver = () => setValue(true);
-  const handleMouseOut = () => setValue(false);
+  const handleMouseOver = () => setHovered(true);
+  const handleMouseOut = () => setHovered(false);
 
   useEffect(
     () => {
+      // console.log(ref)
       const node = ref.current;
       if (node) {
-        node.addEventListener('mouseover', handleMouseOver);
-        node.addEventListener('mouseout', handleMouseOut);
+        node.addEventListener('mouseenter', handleMouseOver);
+        node.addEventListener('mouseleave', handleMouseOut);
 
         return () => {
-          node.removeEventListener('mouseover', handleMouseOver);
-          node.removeEventListener('mouseout', handleMouseOut);
+          node.removeEventListener('mouseenter', handleMouseOver);
+          node.removeEventListener('mouseleave', handleMouseOut);
         };
       }
     },
-    [ref.current] // Recall only if ref changes
+    [ref] 
   );
 
-  return [ref, value];
+  return [ref, hovered];
 }
 
 export default useHover
