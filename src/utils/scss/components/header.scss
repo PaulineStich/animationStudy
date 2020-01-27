@@ -38,17 +38,11 @@ header {
     &:nth-of-type(3) {
       border-left: var(--border);
     }
-    &:hover {
+    &:hover, &[data-is-open="true"] {
       cursor: pointer;
       background-color: var(--color-bg-hover);
-      border-top: var(--border);
+      border-top: 2px solid transparent;
       border-bottom: var(--border);
-    }
-    &[data-is-open="true"] {
-      background-color: var(--color-bg-hover);
-      // svg {
-      //     fill:  #353434;
-      // }
     }
   }
 
