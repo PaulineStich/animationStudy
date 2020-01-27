@@ -20,8 +20,6 @@ const Header = ({ siteTitle, title, next, previous }) => {
     },
   ]
 
-  console.log(previous)
-
   return (
     <header>
       <nav>

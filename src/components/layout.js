@@ -17,9 +17,6 @@ const Layout = ({ children, next, previous, n, p, slide, title}) => {
     }
   `)
 
-  console.log(data.site.siteMetadata.title)
-  console.log(title)
-
   return (
     <>
       <Header
