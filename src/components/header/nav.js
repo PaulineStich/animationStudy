@@ -7,6 +7,7 @@ export const SideNav = () => {
   return (
     <div className="sideNav">
       <ul>
+        <li><Link to="/">Home</Link></li>
         {posts.map(post => {
           return post.subtitle !== null ? (
             <li key={post.slug}>
@@ -34,7 +35,8 @@ export const SideAbout = () => {
         <a href="http://www.bruno-simon.com">Bruno Simon</a>, Françoise
         Fronty-Gilles,{" "}
         <a href="https://twitter.com/jonasnaimark">Jonas Naimark</a>,{" "}
-        <a href="http://www.arnaudroutaboul.com">Arnaud Routaboul</a>.
+        <a href="http://www.arnaudroutaboul.com">Arnaud Routaboul</a>,{" "}
+        Stephen Farrugia.
       </p>
     </div>
   )

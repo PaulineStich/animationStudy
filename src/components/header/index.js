@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group"
 import { IconButton } from "./IconButton"
 import { SideNav, SideAbout } from "./nav"
 
-const Header = ({ siteTitle, next, previous }) => {
+const Header = ({ siteTitle, title, next, previous }) => {
   const [openNav, setOpenNav] = useState(false)
   const [openAbout, setOpenAbout] = useState(false)
 
@@ -41,9 +41,7 @@ const Header = ({ siteTitle, next, previous }) => {
               )}
             </>
           )}
-          <h3>
-            <Link to="/">{siteTitle}</Link>
-          </h3>
+          <p>{title !== undefined ? title : siteTitle }</p>
         </div>
         <IconButton
           dots
@@ -67,12 +65,9 @@ const Header = ({ siteTitle, next, previous }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  title: PropTypes.string,
   next: PropTypes.string,
   previous: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

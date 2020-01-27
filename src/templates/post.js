@@ -36,14 +36,14 @@ const templates = {
 
 const PostTemplate = ({
   data: { mdx: post },
-  pageContext: { next, previous },
+  pageContext: { title, next, previous },
 }) => {
   const [isSlide] = useState(post.frontmatter.subtitle === null ? true : false)
   const nextSlug = next !== null ? next.frontmatter.slug : null
   const previousSlug = previous !== null ? previous.frontmatter.slug : null
 
   return (
-    <Layout next={nextSlug} previous={previousSlug} n={next} p={previous} slide={isSlide}>
+    <Layout next={nextSlug} previous={previousSlug} n={next} p={previous} slide={isSlide} title={title}>
       <MDXProvider components={templates}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXProvider>
