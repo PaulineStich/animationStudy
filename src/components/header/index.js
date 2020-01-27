@@ -20,19 +20,21 @@ const Header = ({ siteTitle, title, next, previous }) => {
     },
   ]
 
+  console.log(previous)
+
   return (
     <header>
       <nav>
         <div>
           <IconButton menu click={() => setOpenNav(!openNav)} open={openNav} />
-          {(previous === null) | undefined ? null : (
+          {previous === undefined ? null : (
             <>
               <Link to={previous} className="headerArrow">
                 <IconButton arrowLeft />
               </Link>
             </>
           )}
-          {(next === null) | undefined ? null : (
+          {next === undefined ? null : (
             <>
               {next && (
                 <Link to={next} className="headerArrow">
