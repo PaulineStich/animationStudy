@@ -59,8 +59,8 @@ header {
       padding: 0;
       li {
         height: 46px;
-        border: var(--border);
-        border-top: none;
+        border-bottom: var(--border);
+        border-right: var(--border);
         background-color: var(--color-bg);
         &:hover {
           background-color: var(--color-bg-hover);
