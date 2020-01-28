@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { ReadTheFirstArticle } from "../components/buttons"
 import WebGL from "../components/webgl/index"
+import { ReadTheFirstArticle } from "../components/buttons"
+import { Title } from "../components/title"
 
 import "../utils/scss/index.scss"
 
@@ -16,13 +17,19 @@ const IndexPage = () => {
             <WebGL />
           </section>
           <section className="body">
+            <div className="home-title">
+              <Title
+                first="Bringing digital intefaces"
+                second="to life with animation"
+              />
+            </div>
             <div className="grid flex-end ">
               <ReadTheFirstArticle />
             </div>
             <div className="description">
               <div className="grid">
                 <h4>
-                  Bringing digital interfaces to life with <br /> animation
+                  And how to be an animation <br /> superhero
                 </h4>
                 <div className="line" />
                 <ul>

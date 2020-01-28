@@ -7,12 +7,18 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    position: absolute;
+    top: 0;
   }
 
   .body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    .home-title {
+      position: relative;
+      top: 25px;
+    }
     .description {
       background-color: var(--color-bg);
       height: 100%;
