@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import WebGL from "../components/webgl/index"
 import { ReadTheFirstArticle } from "../components/buttons"
-import { Title } from "../components/title"
+import Title from "../components/title"
 
 import "../utils/scss/index.scss"
 

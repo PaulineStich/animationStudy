@@ -1,100 +1,112 @@
 .slide {
-    text-align: left;
-    min-height: calc(100vh - 46px - 90px);
-    width: 100vw;
+  text-align: left;
+  min-height: calc(100vh - 46px - 90px);
+  width: 100vw;
+  display: flex;
+
+  .slide-container {
     display: flex;
-  
-    .slide-container {
-      display: flex;
-      flex-direction: column;
-      height: 80%;
-      width: 100vw;
-      align-items: center;
-  
-      h6 {
-        padding-top: 3%;
-        border-bottom: 1px solid rgba(196, 196, 196, 0.3);
-      }
-
-      img {
-        min-height: 278px;
-        text-align: center;
-      }
-      
-      img, h6, p {
-        margin: 20px 0; 
-      }
-  
-      p {
-        max-width: 600px;
-        // & > img {
-        //   width: 100%;
-        // }
-      }
-
-      ul li {
-        &:before {
-          content: '-';
-          padding: 0 10px;
-        }
-        &:first-child {
-          position: relative;
-          left: -15px;
-          &:before {
-            content: '';
-          }
-        }
-      }
-
-    }
-  }
-  
-  .slide-title {
-    text-align: left;
-    height: calc(100vh - 46px);
+    flex-direction: column;
+    height: 80%;
     width: 100vw;
-    position: relative;
-    display: block;
-  
-    &::after {
-      content: "";
-      opacity: 0.05;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: cover;
+    align-items: center;
+    padding-bottom: 100px;
+
+    h6 {
+      padding-top: 3%;
+      border-bottom: 1px solid rgba(196, 196, 196, 0.3);
     }
-  
-    &.principles::after {
-      background-image: url("/img/disney.jpg");
+
+    img {
+      min-height: 278px;
+      text-align: center;
+      width: 100%;
+      margin: 5px 0;
     }
-  
-    .grid {
+
+    p em {
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 90%;
+      justify-content: center;
+      opacity: 0.6;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 0 70px;
     }
-  
-    .slide-head {
-      padding: 50px 0;
-      h4 {
-        width: 50%;
+
+    h6,
+    p {
+      margin: 20px 0;
+    }
+
+    p {
+      max-width: 600px;
+      // & > img {
+      //   width: 100%;
+      // }
+    }
+
+    ul li {
+      &:before {
+        content: "-";
+        padding: 0 10px;
       }
-    }
-  
-    .slide-block {
-      max-width: 55%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      h5 {
-        padding: 10px 0;
-        font-weight: 300;
-        color: var(--color-white);
+      &:first-child {
+        position: relative;
+        left: -15px;
+        &:before {
+          content: "";
+        }
       }
     }
   }
+}
+
+.slide-title {
+  text-align: left;
+  height: calc(100vh - 46px);
+  width: 100vw;
+  position: relative;
+  display: block;
+
+  &::after {
+    content: "";
+    opacity: 0.05;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.principles::after {
+    background-image: url("/img/disney.jpg");
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+  }
+
+  .slide-head {
+    padding: 50px 0;
+    h4 {
+      width: 50%;
+    }
+  }
+
+  .slide-block {
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h5 {
+      padding: 10px 0;
+      font-weight: 300;
+      color: var(--color-white);
+    }
+  }
+}

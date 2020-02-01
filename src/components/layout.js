@@ -5,8 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ children, next, previous, n, p, slide, title}) => {
-
+const Layout = ({ children, next, previous, n, p, slide, title }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -35,7 +34,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   next: PropTypes.string,
   previous: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 export default Layout

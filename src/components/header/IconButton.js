@@ -10,9 +10,9 @@ export const IconButton = props => {
   const { open, click, menu, arrowLeft, arrowRight, dots } = props
 
   const iconProps = {
-    className: 'iconButton',
+    className: "iconButton",
     onClick: click,
-    'data-is-open': open
+    "data-is-open": open,
   }
 
   return (
@@ -20,7 +20,7 @@ export const IconButton = props => {
       {menu && <Menu />}
       {arrowLeft && <ArrowLeft />}
       {arrowRight && <ArrowRight />}
-      {dots && open ? <Close /> : dots && <Dots /> }
+      {dots && open ? <Close /> : dots && <Dots />}
     </div>
   )
 }
@@ -30,7 +30,7 @@ IconButton.propTypes = {
   menu: PropTypes.bool,
   arrowLeft: PropTypes.bool,
   arrowRight: PropTypes.bool,
-  dots: PropTypes.bool
+  dots: PropTypes.bool,
 }
 
 IconButton.defaultProps = {
@@ -38,5 +38,5 @@ IconButton.defaultProps = {
   menu: false,
   arrowLeft: false,
   arrowRight: false,
-  dots: false
+  dots: false,
 }

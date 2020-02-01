@@ -1,24 +1,23 @@
 :root {
+  /* Colours */
+  --color-white: #f3f2f2;
+  --color-bright-white: #faf9f9;
+  --color-border: #c4c4c4;
+  --color-bg: #373a47;
+  --color-bg-hover: rgb(51, 54, 66);
+  --color-buttons: #575c70;
+  --color-buttons-hover: rgb(95, 101, 124);
 
-    /* Colours */
-    --color-white: #f3f2f2;
-    --color-bright-white: #faf9f9;
-    --color-border: #c4c4c4;
-    --color-bg: #373A47;
-    --color-bg-hover:  rgb(51, 54, 66);
-    --color-buttons: #575C70;
-    --color-buttons-hover: rgb(95, 101, 124);
+  // --color-yellow: #ffca28;
+  // --color-blue: #263238;
+  // --color-white: #e5f5f5;
+  // --color-dark-blue: #192227;
+  // --color-border: #101518;
 
-    // --color-yellow: #ffca28;
-    // --color-blue: #263238;
-    // --color-white: #e5f5f5;
-    // --color-dark-blue: #192227;
-    // --color-border: #101518;
-
-    /* Breakpoints */
-    --xlarge: 1680px;
-    --large: 1280px;
-    --medium: 980px;
-    --small: 740px;
-    --xsmall: 480px;
+  /* Breakpoints */
+  --xlarge: 1680px;
+  --large: 1280px;
+  --medium: 980px;
+  --small: 740px;
+  --xsmall: 480px;
 }

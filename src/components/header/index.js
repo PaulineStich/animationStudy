@@ -41,7 +41,7 @@ const Header = ({ siteTitle, title, next, previous }) => {
               )}
             </>
           )}
-          <p>{title !== undefined ? title : siteTitle }</p>
+          <p>{title !== undefined ? title : siteTitle}</p>
         </div>
         <IconButton
           dots
@@ -49,12 +49,13 @@ const Header = ({ siteTitle, title, next, previous }) => {
           open={openAbout}
         />
       </nav>
-      {array.map(el => (
+      {array.map((el, i) => (
         <CSSTransition
           in={el.state}
           timeout={250}
           classNames="opacityFade"
           unmountOnExit
+          key={i}
         >
           {el.component}
         </CSSTransition>

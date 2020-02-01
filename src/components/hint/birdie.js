@@ -54,7 +54,7 @@ const animationBirdRespire = (tl, ventre) => {
   tl.fromTo(ventre, 0.4, { scale: 0.99, ease: Sine.easeOut }, { scale: 0.997 })
 }
 
-const Birdie = ({ isShowing , isHovered }) => {
+const Birdie = ({ isShowing, isHovered }) => {
   let oiseau = useRef(null)
   let queue = useRef(null)
   let aile = useRef(null)
@@ -147,9 +147,10 @@ const Birdie = ({ isShowing , isHovered }) => {
   }, [tlBlahBlah])
 
   useEffect(() => {
-    
     if (clickBlahAnimation !== undefined) {
-      isShowing === undefined ? clickBlahAnimation.play() : clickBlahAnimation.reverse(-1)
+      isShowing === undefined
+        ? clickBlahAnimation.play()
+        : clickBlahAnimation.reverse(-1)
     }
 
     if (hoverSupriseAnimation !== undefined) {
@@ -157,9 +158,7 @@ const Birdie = ({ isShowing , isHovered }) => {
         ? hoverSupriseAnimation.play()
         : hoverSupriseAnimation.reverse(-1)
     }
-
   }, [isShowing, isHovered, hoverSupriseAnimation, clickBlahAnimation])
-
 
   return (
     <div className="bird">

@@ -30,4 +30,4 @@ const Footer = ({ next, previous }) => {
   )
 }
 
-export default Footer;
+export default Footer

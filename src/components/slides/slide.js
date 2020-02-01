@@ -5,7 +5,7 @@ const SlideTemplate = ({ title, children }) => {
     <div className="slide">
       <div className="slide-container">
         <h6>{title}</h6>
-        <p>{children}</p>
+        {children}
       </div>
     </div>
   )

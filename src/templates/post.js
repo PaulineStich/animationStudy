@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import { ReadTheNextArticle } from "../components/buttons"
 import PreviewTemplate from "../components/slides/preview"
 import SlideTemplate from "../components/slides/slide"
+import Article from "../components/slides/article"
 import Hint from "../components/hint"
 
 export const query = graphql`
@@ -30,6 +31,7 @@ export const query = graphql`
 const templates = {
   PreviewTemplate,
   SlideTemplate,
+  Article,
   ReadTheNextArticle,
   Hint
 }
