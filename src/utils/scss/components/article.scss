@@ -1,17 +1,22 @@
 .article {
   .article-head {
-    padding: 220px 0 250px 0;
+    padding: 220px 0 200px 0;
   }
   .article-container {
     display: flex;
     flex-direction: row;
-    .article-introduction,
-    .article-content {
+    .article-introduction {
       max-width: 50%;
+    }
+    .article-introduction, .article-content {
       padding: 0 50px;
     }
     .article-content {
       padding-bottom: 100px;
+      &[data-single-column="true"] {
+        padding: 0 260px;
+        padding-bottom: 130px;
+      }
       h4 {
         padding-top: 50px;
         &::after {
