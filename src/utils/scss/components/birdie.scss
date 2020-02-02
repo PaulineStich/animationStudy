@@ -73,7 +73,12 @@
     color: #3c3737;
     font-family: sans-serif;
     line-height: 22px;
-    width: 98%;
+    width: 80%;
+  }
+  .modal-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   .modal-header {
     position: absolute;

@@ -53,7 +53,7 @@ const Modal = ({ isShowing, hide, children }) => {
               {transition.map(
                 ({ item, key, props }) =>
                   item && (
-                    <div key={key}>
+                    <div key={key} className="modal-block">
                       <animated.div
                         style={{ ...props }}
                         className="modal-header"
