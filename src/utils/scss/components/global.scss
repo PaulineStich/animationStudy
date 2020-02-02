@@ -43,18 +43,15 @@ body {
   }
 
   a {
-    color: var(--color-white);
+    color: var(--color-bright-white);
     font-size: 14px;
     font-family: "roboto", sans-serif;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
     text-decoration: none;
-  }
-
-  a {
-    color: var(--color-white);
+    font-weight: 300;
     &:hover {
-      color: #f5f1f1;
-      transition: color 0.3ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      color: white;
+      transition: white 0.3ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
   }
 
