@@ -17,7 +17,7 @@ const Modal = ({ isShowing, hide, children }) => {
     from: { width: "40%", height: "0%" },
     to: {
       width: isShowing ? "100%" : "0%",
-      height: isShowing ? "20.6%" : "0%",
+      height: isShowing ? "18.6%" : "0%",
     },
   })
 

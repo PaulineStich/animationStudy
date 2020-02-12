@@ -35,8 +35,8 @@
   position: fixed;
   left: 0;
   width: 100vw;
-  height: 95vh;
-  top: 40px;
+  height: calc(100vh - 46px);
+  top: 46px;
   z-index: 1040;
   background-color: rgb(44, 48, 63);
   opacity: 0.8;
