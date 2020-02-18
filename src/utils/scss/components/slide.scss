@@ -3,6 +3,7 @@
   min-height: calc(100vh - 46px - 90px);
   width: 100vw;
   display: flex;
+  align-items: center;
 
   .slide-container {
     display: flex;
@@ -12,7 +13,6 @@
     align-items: center;
 
     h6 {
-      padding-top: 3%;
       border-bottom: 1px solid rgba(196, 196, 196, 0.3);
     }
 
