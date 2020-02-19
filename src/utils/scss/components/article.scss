@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     .article-introduction {
+      min-width: 45%;
       max-width: 50%;
     }
     .article-introduction, .article-content {
@@ -28,7 +29,7 @@
           height: 1px;
           background-color: var(--color-buttons);
           opacity: 0.3;
-          margin: 15px 0 30px 0;
+          margin: 10px 0 20px 0;
         }
         &:first-child {
           padding-top: 0;
@@ -38,7 +39,7 @@
         width: fit-content;
         padding: 0;
         li {
-          margin: 20px 0;
+          margin-bottom: 20px;
           padding: 10px;
           list-style: none;
           background-color: #575b703d;
@@ -48,6 +49,9 @@
       }
       img {
         width: 100%;
+      }
+      p {
+        padding-bottom: 20px;
       }
     }
   }
