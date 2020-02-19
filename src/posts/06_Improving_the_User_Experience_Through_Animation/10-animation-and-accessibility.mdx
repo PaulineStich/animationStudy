@@ -1,0 +1,73 @@
+---
+title: How does animation affect the accessibility of an interface? 
+slug: improving-the-ux-through-animation/animation-and-accessibility
+order: 46
+---
+
+<Article
+  first="How does animation"
+  second="affect the accessibility of an interface? "
+  introduction="Animation can have both positive and negative effects on accessibility. It can help to make interfaces easier to understand by reducing cognitive load and making feedback or state changes easier to follow and understand. But it can also negatively affect people with vestibular disorders and similar conditions."
+>
+
+#### What is cognitive load ? 
+
+Cognitive load refers to the total amount of mental effort being used in a person’s working memory.
+In research studies* it is proved that **animating between the different states of your interface can reduce cognitive load for your users.** This means that they will expend less energy keeping track of where things are, and can then focus their efforts on what’s more important.
+
+Reducing cognitive load is a big plus, but the potential brain benefits of animation don’t stop there. Animation can improve decision-making capabilities and even **help people learn and remember spatial relationships.** Animation can help make it clear which items have moved off-screen and where they can be found again.
+
+####  Vestibular what ?
+
+The idea that animation in our interfaces is capable of making people dizzy or worse wasn’t something the web had to contend with until recently (in fact it has always been an issue but only now it’s becoming noticed, like most accessibility issues). 
+
+Vestibular disorders do come up in web design discussions, but they aren’t mainstream because they lack commercial appeal. So if you haven’t heard of them before, you’re not alone. 
+
+Even Apple discovered this the hard way when the animated transitions in iOS 7 started making some people sick. 
+
+According to vestibular.org, approximately 8 million American adults report a chronic problem with balance, while an additional 2.4 million report a chronic problem with dizziness. **As animated interfaces become more and more the norm, more people have realized that dramatic, large-scale motion on-screen can cause dizziness, nausea, headaches, or worse. **
+
+
+- 🌿 Don’t do **parallax on large areas** (such as background and foreground moving at different speeds) 
+- 🌿 Don’t do **exaggerated parallax **
+- 🌿 Don’t do **scroll-jacking** animations
+- 🌿 Allow your users to **disable animations** (with [CSS prefers-reduced-motion](https://developer.mozilla.org/fr/docs/Web/CSS/@media/prefers-reduced-motion))
+
+There are three factors in particular that play a big part: 
+
+1. the **relative size** of the animation(s)
+
+2. the **direction** of movement
+
+3. the **perceived distance** an animated object covers. 
+
+#### Designing Safer Motion for the Motion Sensitive 
+
+Even those who suffer from vestibular disorders themselves rarely want to see all interface animation eliminated everywhere. 
+
+
+- 🌿 Give **an indicator of what movement will happen** on the site **when a user takes action**. 
+
+A link billed as “the most awesomest spintastic WebGL experiment” likely contains large amounts of animation, and users can make an informed decision as to whether following that link is something they want to do.
+
+- 🌿 Provide **an option to reduce animation** 
+
+This can be accomplished via a button or toggle switch to reduce or turn off animation globally on your site (example: [Holohalo.net](http://holohalo.net/) )
+
+- 🌿 Making sure that any animations that can be interacted with are **keyboard accessible **
+- 🌿 things like carousel items needs to be **automatically paused** if they are being interacted with. 
+
+Any animation that flashes the screen can be especially risky for anyone with epilepsy. 
+
+- 🌿 **Don’t flash** the screen more than three times a second.
+- 🌿 **Add pause controls **on animations longer than five seconds. 
+
+Whenever in doubt, opt for giving control to the user. 
+
+#### Progressive Enhancement and Animation 
+
+Treat animation as a layer of enhancement that helps make your work more universal and less fragile.
+
+For a detailed look at progressive enhancement and how to pull it off in a variety of contexts, check out [“Adaptive Web Design”](http://www.adaptivewebdesign.info) by Aaron Gustafson. 
+
+</Article>
