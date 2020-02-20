@@ -18,6 +18,7 @@ export default class Particles {
       this.texture.magFilter = THREE.LinearFilter
       this.texture.format = THREE.RGBFormat
 
+      this.img = this.texture.image
       this.width = texture.image.width
       this.height = texture.image.height
       this.numPoints = this.width * this.height
@@ -34,14 +35,14 @@ export default class Particles {
     let threshold = 34
 
     // discard pixels darker than threshold #22
-    const img = this.texture.image
+    
     const canvas = document.createElement("canvas")
     const ctx = canvas.getContext("2d")
 
     canvas.width = this.width
     canvas.height = this.height
     ctx.scale(1, -1)
-    ctx.drawImage(img, 0, 0, this.width, this.height * -1)
+    ctx.drawImage(this.img, 0, 0, this.width, this.height * -1)
 
     const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
     let originalColors = Float32Array.from(imgData.data)
@@ -125,29 +126,29 @@ export default class Particles {
       new THREE.InstancedBufferAttribute(angles, 1, false)
     )
 
-    this.finalObject = new THREE.Mesh(geometry, material)
-    this.container.add(this.finalObject)
+    this.mesh = new THREE.Mesh(geometry, material)
+    this.container.add(this.mesh)
   }
 
   update(delta) {
-    if (!this.finalObject) return
+    if (!this.mesh) return
 
-    this.finalObject.material.uniforms.uTime.value += delta
+    this.mesh.material.uniforms.uTime.value += delta
   }
 
   show() {
     // reset
     TweenLite.fromTo(
-      this.finalObject.material.uniforms.uSize,
+      this.mesh.material.uniforms.uSize,
       0.88,
       { value: 0.25 },
       { value: 0.75 }
     )
-    TweenLite.to(this.finalObject.material.uniforms.uRandom, 0.8, {
+    TweenLite.to(this.mesh.material.uniforms.uRandom, 0.8, {
       value: 0.5,
     })
     TweenLite.fromTo(
-      this.finalObject.material.uniforms.uDepth,
+      this.mesh.material.uniforms.uDepth,
       1.5,
       { value: 40.0 },
       { value: 3.0 }
@@ -155,9 +156,9 @@ export default class Particles {
   }
 
   resize() {
-    if (!this.finalObject) return
+    if (!this.mesh) return
 
     const scale = this.webgl.fovHeight / this.height
-    this.finalObject.scale.set(scale, scale, 1)
+    this.mesh.scale.set(scale, scale, 1)
   }
 }
