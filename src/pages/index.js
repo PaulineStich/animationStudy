@@ -1,4 +1,4 @@
-import React, {Suspense} from "react"
+import React, { Suspense } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ReadTheFirstArticle } from "../components/buttons"
@@ -6,7 +6,16 @@ import Title from "../components/title"
 
 import "../utils/scss/index.scss"
 
-const WebGL = React.lazy(() => import ('../components/webgl/index'))
+const WebGL = React.lazy(() => import("../components/webgl/index"))
+
+const content = [
+  { title: "How to use animation to solve problems?" },
+  { title: "How to use animation for the power of good?" },
+  { title: "How to find a place for animation in a design process?" },
+  { title: "How to animate responsibly? " },
+  { title: "How to give more personality and bring digital interfaces to life with subtile animation?",},
+  { title: "How to use interactive animation to tell a story?" },
+]
 
 const IndexPage = () => {
   return (
@@ -36,29 +45,13 @@ const IndexPage = () => {
                 </h4>
                 <div className="line" />
                 <ul>
-                  <li>
-                    <p>How to use animation to solve problems ? </p>
-                  </li>
-                  <li>
-                    <p>How to use animation for the power of good ? </p>
-                  </li>
-                  <li>
-                    <p>
-                      How to find a place for animation in a design process ?{" "}
-                    </p>
-                  </li>
-                  <li>
-                    <p>How to animate responsibly ? </p>
-                  </li>
-                  <li>
-                    <p>
-                      How to give more personality and bring digital interfaces
-                      to life with subtile animation ?{" "}
-                    </p>
-                  </li>
-                  <li>
-                    <p>How to use interactive animation to tell a story ? </p>
-                  </li>
+                  {content.map(el => {
+                    return (
+                      <li key={el.title}>
+                        <p>{el.title}</p>
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             </div>
