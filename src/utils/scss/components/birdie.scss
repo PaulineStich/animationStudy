@@ -35,8 +35,8 @@
   position: fixed;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 46px);
-  top: 46px;
+  height: calc(100vh - var(--size-header));
+  top: var(--size-header);
   z-index: 1040;
   background-color: rgb(44, 48, 63);
   opacity: 0.8;

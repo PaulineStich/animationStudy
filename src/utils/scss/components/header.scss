@@ -1,14 +1,16 @@
 header {
   --border: 2px solid rgba(204, 204, 204, 0.1);
   --borderLight: 2px solid rgba(245, 245, 245, 1);
-  --height: 46px;
+  position: fixed;
+  width: 100%;
   background: var(--color-bg);
-  height: var(--height);
+  height: var(--size-header);
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   border-bottom: var(--border);
   padding: 0;
+  z-index: 10;
 
   nav {
     display: flex;
@@ -26,8 +28,8 @@ header {
 
   .iconButton {
     position: relative;
-    height: var(--height);
-    width: var(--height);
+    height: var(--size-header);
+    width: var(--size-header);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,11 +56,11 @@ header {
     z-index: 1;
     width: 368px;
     position: fixed;
-    top: 46px;
+    top: var(--size-header);
     ul {
       padding: 0;
       li {
-        height: 46px;
+        height: var(--size-header);
         border-bottom: var(--border);
         border-right: var(--border);
         background-color: var(--color-bg);
