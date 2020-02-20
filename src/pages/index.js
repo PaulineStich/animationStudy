@@ -1,11 +1,12 @@
-import React from "react"
+import React, {Suspense} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import WebGL from "../components/webgl/index"
 import { ReadTheFirstArticle } from "../components/buttons"
 import Title from "../components/title"
 
 import "../utils/scss/index.scss"
+
+const WebGL = React.lazy(() => import ('../components/webgl/index'))
 
 const IndexPage = () => {
   return (
@@ -14,7 +15,9 @@ const IndexPage = () => {
         <SEO title="Home" />
         <div className="home">
           <section className="head">
-            <WebGL />
+            <Suspense fallback={<div>..</div>}>
+              <WebGL />
+            </Suspense>
           </section>
           <section className="body">
             <div className="home-title">
