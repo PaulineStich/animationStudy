@@ -2,6 +2,8 @@ header {
   --border: 2px solid rgba(204, 204, 204, 0.1);
   --borderLight: 2px solid rgba(245, 245, 245, 1);
   --height: 46px;
+  position: fixed;
+  width: 100%;
   background: var(--color-bg);
   height: var(--height);
   padding: 0 20px;
