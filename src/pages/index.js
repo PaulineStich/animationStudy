@@ -23,18 +23,18 @@ const IndexPage = () => {
       <Layout>
         <SEO title="Home" />
         <div className="home">
-          <section className="head">
-            <Suspense fallback={<div>..</div>}>
+          <section className="head grid">
+            <Suspense fallback={<div> . </div>}>
               <WebGL />
             </Suspense>
-          </section>
-          <section className="body">
-            <div className="home-title">
+            <div>
               <Title
                 first="Bringing digital intefaces"
                 second="to life with animation"
               />
             </div>
+          </section>
+          <section className="body">
             <div className="grid flex-end ">
               <ReadTheFirstArticle />
             </div>

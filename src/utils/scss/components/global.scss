@@ -62,9 +62,10 @@ body {
   }
 
   h2 {
-    font-size: 2.369rem;
+    font-size: 3vw; //2.369rem;
     color: var(--color-bright-white);
     font-weight: 200;
+    line-height: 3.3vw;
   }
 
   h3 {
@@ -143,6 +144,11 @@ body {
 .flex-end {
   display: flex;
   justify-content: flex-end;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
 }
 
 h1 {

@@ -5,20 +5,20 @@
 
   .head {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
+    align-items: center; 
+    justify-content: flex-start;
+    height: calc(100vh - var(--size-header) - 400px);
+    #canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 
   .body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    .home-title {
-      position: relative;
-      top: 25px;
-    }
     .description {
       background-color: var(--color-bg);
       height: 100%;
