@@ -1,6 +1,6 @@
 # Bringing digital interfaces to life with animation
  
-![GitHub Preview](/src/images/github-preview.jpg)
+![GitHub Preview](/src/images/github-preview.png)
 
 
 > 😬 How to use animation to solve problems ?  
