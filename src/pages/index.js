@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ReadTheFirstArticle } from "../components/buttons"
 import Title from "../components/title"
+import WebGL from "../components/webgl/index"
 
 import "../utils/scss/index.scss"
 
-const WebGL = React.lazy(() => import("../components/webgl/index"))
 
 const content = [
   { title: "How to use animation to solve problems?" },
@@ -24,9 +24,7 @@ const IndexPage = () => {
         <SEO title="Home" />
         <div className="home">
           <section className="head grid">
-            <Suspense fallback={<div> . </div>}>
-              <WebGL />
-            </Suspense>
+            <WebGL />
             <div>
               <Title
                 first="Bringing digital intefaces"
