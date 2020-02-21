@@ -1,5 +1,5 @@
 .post {
-  height: calc(100vh - 46px);
+  height: calc(100vh - var(--size-header));
   width: 100vw;
 
   section {

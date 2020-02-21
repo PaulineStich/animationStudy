@@ -1,13 +1,15 @@
 .first-article {
   height: 125px;
   width: 265px;
-  background-color: var(--color-buttons);
+  background-color: #626c8b;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
   padding: 15px 20px;
-  transition: var(--ease);
   border-bottom: none;
+  cursor: pointer;
+  z-index: 0;
   svg {
     align-self: flex-end;
     transition: var(--ease);
@@ -15,14 +17,27 @@
     left: 0;
   }
   &:hover {
-    cursor: pointer;
-    background-color: var(--color-buttons-hover);
-    transition: var(--ease);
+    &::after {
+      transition: var(--ease);
+      opacity: 1;
+    }
     svg {
       transition: var(--ease);
       position: relative;
       animation: 0.3s linear infinite alternate slidein;
     }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten(#626c8b, 5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
   }
 }
 
@@ -38,6 +53,8 @@
   border-bottom: none;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
+  z-index: 0;
   div {
     max-width: 50%;
     &:nth-of-type(2) {
@@ -53,14 +70,27 @@
     margin: 0 12px;
   }
   &:hover {
-    cursor: pointer;
-    background-color: var(--color-buttons-hover);
-    transition: var(--ease);
+    &::after {
+      transition: var(--ease);
+      opacity: 1;
+    }
     svg {
       transition: var(--ease);
       position: relative;
       animation: 0.3s linear infinite alternate slidein;
     }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten(#626c8b, 5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
   }
 }
 
@@ -73,6 +103,8 @@
   align-items: center;
   z-index: 1051;
   position: relative;
+  cursor: pointer;
+  z-index: 0;
   h6 {
     padding: 0 5px;
     white-space: nowrap;
@@ -81,8 +113,21 @@
     max-width: 170px;
   }
   &:hover {
-    cursor: pointer;
-    background-color: var(--color-buttons-hover);
-    transition: var(--ease);
+    &::after {
+      transition: var(--ease);
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten(#626c8b, 5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
   }
 }

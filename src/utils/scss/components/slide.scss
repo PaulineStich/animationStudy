@@ -1,6 +1,6 @@
 .slide {
   text-align: left;
-  min-height: calc(100vh - 46px - 90px);
+  min-height: calc(100vh - var(--size-header) - 90px);
   width: 100vw;
   display: flex;
   align-items: center;

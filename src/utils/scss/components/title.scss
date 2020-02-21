@@ -4,9 +4,11 @@
   max-width: 800px;
   h2 {
     padding: 10px 0;
-    line-height: 44px;
     &:nth-child(2) {
       padding-left: 120px;
+    }
+    &:nth-child(3) {
+      padding-left: 240px;
     }
   }
 }

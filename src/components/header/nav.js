@@ -12,8 +12,8 @@ export const SideNav = () => {
         </li>
         {posts.map(post => {
           return post.subtitle !== null ? (
-            <li key={post.slug}>
-              <Link to={post.slug}>{post.title}</Link>
+            <li key={post.title}>
+              <Link to={`/${post.slug}`}>{post.title}</Link>
             </li>
           ) : null
         })}
@@ -24,8 +24,7 @@ export const SideNav = () => {
 
 export const SideAbout = () => {
   return (
-    <div className="sideAbout">
-      {/* <h6>About</h6> */}
+    <div className="sideAbout">-
       <p>
         This is an interactive guidebook for an animation study, made by{" "}
         <a href="http://www.popo.works">Pauline Stichelbaut</a> at the{" "}

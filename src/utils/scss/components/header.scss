@@ -1,16 +1,15 @@
 header {
   --border: 2px solid rgba(204, 204, 204, 0.1);
-  --borderLight: 2px solid rgba(245, 245, 245, 1);
-  --height: 46px;
   position: fixed;
   width: 100%;
   background: var(--color-bg);
-  height: var(--height);
+  height: var(--size-header);
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   border-bottom: var(--border);
   padding: 0;
+  z-index: 10;
 
   nav {
     display: flex;
@@ -28,11 +27,13 @@ header {
 
   .iconButton {
     position: relative;
-    height: var(--height);
-    width: var(--height);
+    height: var(--size-header);
+    width: var(--size-header);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    z-index: 0;
     &:nth-of-type(1) {
       border-right: var(--border);
     }
@@ -41,10 +42,24 @@ header {
       border-left: var(--border);
     }
     &:hover, &[data-is-open="true"] {
-      cursor: pointer;
-      background-color: var(--color-bg-hover);
+      &::after {
+        transition: var(--ease);
+        opacity: 1;
+      }
+    }
+    &::after {
+      content: "";
       border-top: 2px solid transparent;
       border-bottom: var(--border);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: darken(rgb(48, 53, 69), 2);
+      opacity: 0;
+      z-index: -2;
+      transition: opacity 250ms;
     }
   }
 
@@ -56,17 +71,16 @@ header {
     z-index: 1;
     width: 368px;
     position: fixed;
-    top: 46px;
+    top: var(--size-header);
     ul {
       padding: 0;
       li {
-        height: 46px;
+        height: var(--size-header);
         border-bottom: var(--border);
         border-right: var(--border);
         background-color: var(--color-bg);
         &:hover {
-          background-color: var(--color-bg-hover);
-          // border: var(--borderLight);
+          background-color: darken(rgb(48, 53, 69), 2);
         }
         a {
           justify-content: flex-start;

@@ -1,5 +1,5 @@
 .article {
-  min-height: calc(100vh - 46px - 90px);
+  min-height: calc(100vh - var(--size-header) - 90px);
   .article-head {
     padding: 220px 0 200px 0;
   }
