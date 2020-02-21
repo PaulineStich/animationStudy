@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Title from "../title"
 
-const Article = ({ first, second, introduction, children }) => {
+const Article = ({ first, second, third, introduction, children }) => {
   const oneColumn = introduction === undefined ? true : false;
   return (
     <div className="article grid">
@@ -10,6 +10,7 @@ const Article = ({ first, second, introduction, children }) => {
         <Title
           first={first}
           second={second}
+          third={third}
         />
       </div>
       <div className="article-container">
@@ -23,6 +24,7 @@ const Article = ({ first, second, introduction, children }) => {
 Title.propTypes = {
   first: PropTypes.string,
   second: PropTypes.string,
+  third: PropTypes.string,
   introduction: PropTypes.string
 }
 
