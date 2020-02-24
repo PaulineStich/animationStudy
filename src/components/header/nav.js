@@ -24,7 +24,7 @@ export const SideNav = () => {
 
 export const SideAbout = () => {
   return (
-    <div className="sideAbout">-
+    <div className="sideAbout">
       <p>
         This is an interactive guidebook for an animation study, made by{" "}
         <a href="http://www.popo.works">Pauline Stichelbaut</a> at the{" "}

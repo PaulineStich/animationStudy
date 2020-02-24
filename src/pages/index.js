@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ReadTheFirstArticle } from "../components/buttons"
@@ -6,7 +6,6 @@ import Title from "../components/title"
 import WebGL from "../components/webgl/index"
 
 import "../utils/scss/index.scss"
-
 
 const content = [
   { title: "How to use animation to solve problems?" },
